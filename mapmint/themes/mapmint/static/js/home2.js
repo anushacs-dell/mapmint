@@ -95,7 +95,7 @@ function osm_getTileURL(bounds) {
  }
 }
 
-var $j = jQuery.noConflict();
+var $j = JQuery.noConflict();
 
 
 function handC() {

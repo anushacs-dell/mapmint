@@ -94,30 +94,33 @@ Reveal.initialize({
 		]
 	});
  
-$('.mdm').click(function(){
- $('body').animate({
+var $j = jQuery.noConflict();
+$j(function($) {
+	init();
+$j('.mdm').click(function(){
+ $j('body').animate({
          scrollTop: $(".mdmb").offset().top
      }, 800);
 });
 
-$('.mda').click(function(){  
- $('body').animate({
+$j('.mda').click(function(){  
+ $j('body').animate({
          scrollTop: $(".mdab").offset().top
      }, 1000);
 });
 
-$('.mmm').click(function(){
- $('body').animate({
+$j('.mmm').click(function(){
+ $j('body').animate({
          scrollTop: $(".mmmb").offset().top
      }, 1300);
 });
 
-$('.mpm').click(function(){
- $('body').animate({
+$j('.mpm').click(function(){
+ $j('body').animate({
          scrollTop: $(".mpmb").offset().top
      }, 1800);
 });
-
+});
 
 
 

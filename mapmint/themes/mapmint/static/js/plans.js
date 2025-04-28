@@ -1,20 +1,27 @@
 var map;
 var lonlat;
-var baseOSM, osm, OSMgs;
-var cycle;
+var  OSMgs;
 var $j = jQuery.noConflict();
-    
-$j(function($) {
 
-	
-	
-	 if (!OpenLayers.CANVAS_SUPPORTED) {
+$j(function($) {
+    console.log( "ready!" );
+    $(".span4").each(function(){
+      console.log($(this));
+        $(this).removeClass("span4").addClass("col-md-4");
+	});
+	$(".span8").each(function(){
+	  $(this).removeClass("span8").addClass("col-md-8");
+	  });
+	  $(".span6").each(function(){
+	    $(this).removeClass("span6").addClass("col-md-6");
+	    });
+         if (!OpenLayers.CANVAS_SUPPORTED) {
                 var unsupported = OpenLayers.Util.getElement('unsupported');
                 unsupported.innerHTML = 'Your browser does not support canvas, nothing to see here !';
             }
 
             OSMgs = new OpenLayers.Layer.OSM('OSM Grey Scaled', null, {
-            	opacity: 1,
+                opacity:1,
                 eventListeners: {
                     tileloaded: function(evt) {
                         var ctx = evt.tile.getCanvasContext();
@@ -32,76 +39,37 @@ $j(function($) {
                 }
             });
 
-    map = new OpenLayers.Map('map6', {
-    	projection: "EPSG:900913",
+    map = new OpenLayers.Map('map4', {
+        projection: "EPSG:900913",
     controls: []
     });
 
+
     map.addLayers([OSMgs]);
-    
+
     var attr = new OpenLayers.Control.Attribution();
     map.addControl(attr);
 
-    map.setCenter(new OpenLayers.LonLat(135.52242994308472,34.700478315353394).transform(
-        new OpenLayers.Projection("EPSG:4326"),map.getProjectionObject()
-    ), 15);
-    
+    map.setCenter(new OpenLayers.LonLat(2.351828,48.856578).transform(new OpenLayers.Projection("EPSG:4326"),map.getProjectionObject()), 15);
+
      var movingMap = window.setInterval(function() {
         map.moveByPx(0.1,0.5);
-
-      },
-      100
-    );
- 
+        }, 100);
 
 
 
 
-$("li.pg a").hover(
-  function () {
-    $("li.pg h3").css('color', '#3f7aa1');
-  }, 
-function() {
-        $("li.pg h3").css('color', '')
-    }
-);
 
-$("li.rd a").hover(
-  function () {
-    $("li.rd h3").css('color', '#fc0204');
-  },
- function() {
-        $("li.rd h3").css('color', '#707070')
-    }
-);
-
-$("li.gr a").hover(
-  function () {
-    $("li.gr h3").css('color', '#008f00');
-  },
- function() {
-        $("li.gr h3").css('color', '#707070')
-    }
-);
-
-$("li.rp a").hover(
-  function () {
-    $("li.rp h3").css('color', '#8597be');
-  },
- function() {
-        $("li.rp h3").css('color', '#707070')
-    }
-);  
-
-$("li.cg a").hover(
-  function () {
-    $("li.cg h3").css('color', '#ffea00');
-  },
- function() {
-        $("li.cg h3").css('color', '#707070')
-    }
-);
-
+$('.ce').click(function(){
+ $('body').animate({
+         scrollTop: $(".os").offset().top
+     }, 2000);
 });
 
+$('.wyg').click(function(){
+ $('body').animate({
+         scrollTop: $(".det").offset().top
+     }, 1500);
+});
 
+});

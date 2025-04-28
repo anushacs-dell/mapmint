@@ -2,8 +2,9 @@ var map;
 var lonlat;
 var  OSMgs;
 var $j = jQuery.noConflict();
+var $ = $j;
 
-$j(function($) {
+$(function($) {
     console.log( "ready!" );
     $(".span4").each(function(){
       console.log($(this));

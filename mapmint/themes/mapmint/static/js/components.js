@@ -3,8 +3,9 @@ var lonlat;
 var baseOSM, osm, OSMgs;
 var cycle;
 var $j = jQuery.noConflict();
-    
-$j(function($) {
+var $ = $j;
+
+$(function($) {
 
 	
 	

@@ -96,25 +96,25 @@ function osm_getTileURL(bounds) {
 }
 
 var $j = jQuery.noConflict();
-
+var $ = $j;
 
 function handC() {
 	(cycle = function() {
-		$j(".hand, .hand2").css({'background': '#83C849'});
-		$j(".hand, .hand2").animate({bottom: '-=5px'}, {queue:true, duration:100, easing:'easeOutBounce'}, 100);
-		$j(".hand, .hand2").animate({bottom: '+=5px'}, {queue:true, duration:100, easing:'easeOutBounce'}, 100);
+		$(".hand, .hand2").css({'background': '#83C849'});
+		$(".hand, .hand2").animate({bottom: '-=5px'}, {queue:true, duration:100, easing:'easeOutBounce'}, 100);
+		$(".hand, .hand2").animate({bottom: '+=5px'}, {queue:true, duration:100, easing:'easeOutBounce'}, 100);
 	})();
     window.setTimeout(function() { handC(); }, 300, cycle);
     }
 
 function bounceDiv() {
-	$j('.elefant, .shape, .osm, .gdal, .qst').effect("bounce", { times: 6 }, 500,function() {
-		$j('.elefant, .shape, .osm, .gdal, .qst').fadeOut();
-		$j('.inimess').fadeOut();
+	$('.elefant, .shape, .osm, .gdal, .qst').effect("bounce", { times: 6 }, 500,function() {
+		$('.elefant, .shape, .osm, .gdal, .qst').fadeOut();
+		$('.inimess').fadeOut();
     });
 }
 
-$j(function($) {
+$(function($) {
 	init();
 
 $('.map0,.map1, .map2, .map3, .map4, .map5').css({opacity:0});

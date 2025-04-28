@@ -95,28 +95,29 @@ Reveal.initialize({
 	});
  
 var $j = jQuery.noConflict();
-$j(function($) {
+var $ = $j;
+$(function($) {
 	init();
-$j('.mdm').click(function(){
- $j('body').animate({
+$('.mdm').click(function(){
+ $('body').animate({
          scrollTop: $(".mdmb").offset().top
      }, 800);
 });
 
-$j('.mda').click(function(){  
- $j('body').animate({
+$('.mda').click(function(){  
+ $('body').animate({
          scrollTop: $(".mdab").offset().top
      }, 1000);
 });
 
-$j('.mmm').click(function(){
- $j('body').animate({
+$('.mmm').click(function(){
+ $('body').animate({
          scrollTop: $(".mmmb").offset().top
      }, 1300);
 });
 
-$j('.mpm').click(function(){
- $j('body').animate({
+$('.mpm').click(function(){
+ $('body').animate({
          scrollTop: $(".mpmb").offset().top
      }, 1800);
 });

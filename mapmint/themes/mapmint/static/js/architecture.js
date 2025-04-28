@@ -120,32 +120,33 @@ function zoomto(x,y,z) {
 
    
 var $j = jQuery.noConflict();
-$j(function($) {
+var $ = $j;
+$(function($) {
     init();
  
 var what = ".tagcloud a"; 
 headline_interval = setInterval('decorate_links(0.8,0.2,"#83c849")', 850); headline_interval = setInterval('decorate_links(0.6,0.1,"#83c849")', 450); 
-headline_count = $j(what).size();
+headline_count = $(what).size();
 
 
 setInterval(function() {
-    $j('.b').animate( {borderLeftColor: '#d9d8d8' }, 500)
+    $('.b').animate( {borderLeftColor: '#d9d8d8' }, 500)
     .animate( {borderLeftColor: '#83c849'}, 500); 
     }, 1000);
     
 setInterval(function() {
-    $j('.c').animate( {borderTopColor: '#d9d8d8' }, 500)
+    $('.c').animate( {borderTopColor: '#d9d8d8' }, 500)
     .animate( {borderTopColor: '#83c849'}, 500); 
     }, 1000);
 
 setInterval(function() {
-    $j('#warped span').animate( {color: '#cbcbcb' }, 1000)
+    $('#warped span').animate( {color: '#cbcbcb' }, 1000)
     .animate( {color: '#83c849'}, 1000); 
     }, 2000);
     
     
-$j(function () {
-    $j("img.zoo").animate({
+$(function () {
+    $("img.zoo").animate({
             "width": 450,
             "height": 200,
             "left": "35%",
@@ -153,10 +154,10 @@ $j(function () {
      }, 1000 );
 });
 
-$j(".sun").fadeIn(200);
+$(".sun").fadeIn(200);
 
 	
-target = $j('.anim2');
+target = $('.anim2');
 originalHeight = target.height();
 target.height(0).css({
     display: 'block'
@@ -167,8 +168,8 @@ target.height(0).css({
 
  
     setTimeout(function() {
-        $j(function () {
-        $j(".inimess2").fadeIn(1000);	
+        $(function () {
+        $(".inimess2").fadeIn(1000);	
     
         
     setTimeout(doDisplay, 1500 );
@@ -196,77 +197,77 @@ target.height(0).css({
 
 
 
-$j('.gdgreen').click(function(){
- $j('body').animate({
-         scrollTop: $j(".pyd").offset().top
+$('.gdgreen').click(function(){
+ $('body').animate({
+         scrollTop: $(".pyd").offset().top
      }, 2000); 
 });
 	
-$j('.msgreen').click(function() {
- $j('body').animate({
-         scrollTop: $j(".syp").offset().top
+$('.msgreen').click(function() {
+ $('body').animate({
+         scrollTop: $(".syp").offset().top
      }, 2000);  
 });
 
 
-$j('.olgreen').click(function() {
- $j(' body').animate({
-         scrollTop: $j(".cwa").offset().top
+$('.olgreen').click(function() {
+ $(' body').animate({
+         scrollTop: $(".cwa").offset().top
      }, 2000);  
 });
 
-$j('.jqgreen').click(function() {
- $j(' body').animate({
-         scrollTop: $j(".psm").offset().top
+$('.jqgreen').click(function() {
+ $(' body').animate({
+         scrollTop: $(".psm").offset().top
      }, 2000);
 });
 
 
-function decorate_links(start,end,color) { var a = Math.floor(Math.random() * headline_count); $j(".tagcloud a:eq(" + a + ")").fadeTo('slow', start, function () { $j(this).css('color', color) }); $j(".tagcloud a:eq(" + a + ")").fadeTo('slow', end); 
+function decorate_links(start,end,color) { var a = Math.floor(Math.random() * headline_count); $(".tagcloud a:eq(" + a + ")").fadeTo('slow', start, function () { $(this).css('color', color) }); $(".tagcloud a:eq(" + a + ")").fadeTo('slow', end); 
 }
 
 function goTop() {
-	$j('html, body').animate({
-         scrollTop: $j("header").offset().top
+	$('html, body').animate({
+         scrollTop: $("header").offset().top
      }, 2000);  
 
 }
 
 function doDisplay() {
 			
-			$j('.anim2').append('<div id="cog"></div>');	
-			$j(".gddesc").fadeIn(1000);
-			$j(".sun").fadeOut(1000);
-			$j(".wploud").fadeIn(1000);	
+			$('.anim2').append('<div id="cog"></div>');	
+			$(".gddesc").fadeIn(1000);
+			$(".sun").fadeOut(1000);
+			$(".wploud").fadeIn(1000);	
 
 }
 
 function doDisplay1() {
-			$j('.anim2').append('<div id="cog1"></div>');
-			$j(".msdesc").fadeIn(1000);			
-			$j(".ogcloud").fadeIn(1000);	
+			$('.anim2').append('<div id="cog1"></div>');
+			$(".msdesc").fadeIn(1000);			
+			$(".ogcloud").fadeIn(1000);	
 			}
 
 
 function doDisplay2() {
 
-		$j('.anim2').append('<div id="cog2"></div>');
-			$j(".oldesc").show();
+		$('.anim2').append('<div id="cog2"></div>');
+			$(".oldesc").show();
 					
 	}
 	
 function doDisplay3(){
-	$j('.anim2').append('<div id="cog3"></div>');
-			$j(".jqdesc").fadeIn(1000);	
+	$('.anim2').append('<div id="cog3"></div>');
+			$(".jqdesc").fadeIn(1000);	
 }
 	
 function doDisplay4() {
-	$j(".oldesc").show();
+	$(".oldesc").show();
 
 (function doDisplay5($) {
    
-        $j("#scroller").fadeIn(1000);
-        $j("#scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
+        $("#scroller").fadeIn(1000);
+        $("#scroller").simplyScroll({orientation:'vertical',customClass:'vert'});
    
 })(jQuery);
 

@@ -1,0 +1,36 @@
+
+<body onload="init()">
+    <div class="panel hidden-phone">
+    <div id="form-container"> 
+    <h1 class="ct" >Contact <a href="./Home" class="mmw">Map<span>Mint</span></a></h1>
+    <fieldset>
+    <form>
+    <div class="error" style="display: none">An error occurred. Please try again and fill up all the fields.</div>
+    <div class="success" style="display: none">Your message has been sent. We will answer you shortly.</div>
+    <div class="field">
+    <label for="Name">Last name:</label>
+    <input type="text" value="" id="Name" />
+    </div>
+    <div class="field">
+    <label for="Firstname">First name:</label>
+    <input type="text" value="" id="Firstname" />
+    </div>     	
+    <div class="field">
+    <label for="Email">Email:</label>
+    <input type="text" value="" id="Email" />
+    </div>
+    <div class="field">
+    <label for="Organisation">Organisation:</label>
+    <input type="text" value="" id="Organisation" />
+    </div>
+    <div class="field">
+    <label for="Message">Message:</label>
+    <textarea id="Message"></textarea>
+    </div>
+    <div class="field">
+    <input type="submit" value="Send your message" class="btn bckflip"  onclick="try{sendmail()}catch(e){};return false;"/>
+    </div>
+    </form>
+    </fieldset>
+    </div>
+    </div>

@@ -4,4 +4,5 @@ draft = false
 title = 'Overview'
 layout = 'overview'
 loadJS = ["jquery.animation.easing.js","jquery.backgroundPosition.js","jquery.simplyscroll.js","architecture.js"]
+loadCSS = ["style.css"]
 +++
